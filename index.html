@@ -22,9 +22,9 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class=".bg-dark-subtle">
-    <header class="header">
-      <div class="container">
+  <body>
+    <header class="header bg-dark-subtle text-light">
+      <div class="container-fluid">
         <h3 class="logo">WeatherIo</h3>
         <div class="search-container">
           <input
@@ -33,7 +33,9 @@
             placeholder="Search for a City..."
             class="form-control"
           />
-          <button id="searchBtn" class="btn btn-light">Search</button>
+          <button id="searchBtn" class="btn btn-light rounded-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
       </div>
     </header>

@@ -27,7 +27,7 @@
 
 }
 .header .container #search{
-    width: fit-content;
+    width: fit-content !important;
     
 }
 .search-container{
