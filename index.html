@@ -23,23 +23,22 @@
     />
   </head>
   <body>
-    <header class="header bg-dark-subtle text-light">
-      <div class="container-fluid">
-        <h3 class="logo">WeatherIo</h3>
-        <div class="search-container">
-          <input
-            type="text"
-            id="search"
-            placeholder="Search for a City..."
-            class="form-control"
-          />
-          <button id="searchBtn" class="btn btn-light rounded-circle">
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <!-- NavBar / Header -->
+    <div class="container-fluid">
+      <div class="header">
+        <h2>Climate</h2>
+        <div class="weather-input">
+          <input type="text" id="city_input" name="city" placeholder="Enter City Name..." />
+          <button id="searchBtn" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+          <button id="locationBtn" type="button">
+            <i class="fa-solid fa-location-crosshairs"></i> Current Location
           </button>
         </div>
       </div>
-    </header>
-
+      
+    </div>
     <!-- JavaScript Link -->
     <script src="/main.js"></script>
   </body>

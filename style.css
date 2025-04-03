@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-/* :root{
+:root{
     --bg-color1 : #212529;
     --bg-color2 : #2a2b2d;
-} */
+}
 /* Universal Selector */
 * {
     margin: 0;
@@ -11,29 +11,54 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-/* body{
-    background-color: #212529 !important; 
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color1) !important;
     color: #fff !important;
-} */
-/* .header{
-    background-color: #2a2b2d !important;
-    color: #fff !important;
-} */
-.header .container{
+    padding: 0 15px;
+    
+}
+.header{
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-
+    margin-bottom: 10px;
+    padding: 15px 0;
 }
-.header .container #search{
-    width: fit-content !important;
+.header #city_input{
+    background-color: #fff;
+    color: #212529;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 25px;
     
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    &:focus{
+        outline: none;
+        
+    }
 }
-.search-container{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 10px;
+.header #searchBtn{
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: #007FFF;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+}
+.header #locationBtn{
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: #ea6e46;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
 }
