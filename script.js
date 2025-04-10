@@ -1,12 +1,13 @@
 let cityInput = document.getElementById('cityInput'),
 searchBtn = document.getElementById('search-btn'),
+locationBtn = document.getElementById('current-btn'),
 api_key = 'ebc85bf0b3487c8fdb52f925caf2e678',
 
 cityDisplay = document.getElementById('cityDisplay'),
 description = document.getElementById('description');
 weatherInfoCard = document.querySelector('.weather-info'),
 otherDetailsCard = document.querySelector('.info-details-2'),
-fouDaysCard = document.querySelector('.daily-forecast-box')
+fouDaysCard = document.querySelector('.daily-forecast-box');
 
 
 
@@ -29,7 +30,7 @@ function getWeatherDetails(name, lat, lon, country, state){
           <h3 id="temp">${Math.round(data.main.temp).toFixed(1)}&deg;C</h3>
           <div class="info-details">
             <p id="realFell">
-              <i class="fa-solid fa-temperature-three-quarters"></i> Real Fell :
+              <i class="fa-solid fa-temperature-three-quarters"></i> Feels Like :
               ${Math.round(data.main.feels_like)}&deg;C
             </p>
             <p id="humidity"><i class="fa-solid fa-droplet"></i> Humidity : ${data.main.humidity} %</p>
@@ -91,4 +92,24 @@ function getCityCoordinates(){
     })
 }
 
+
+function getUserCoordinates(){
+    navigator.geolocation.getCurrentPosition(positon =>{
+        let {latitude, longitude} = positon.coords;
+        console.log(latitude,longitude)
+        let REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${api_key}&units=metric`;
+        fetch(REVERSE_GEOCODING_URL).then(res => res.json()).then(data => {
+            let {name, country, state} = data[0];
+            getWeatherDetails(name, latitude, longitude, country, state);
+        }).catch(() => {
+            alert('User Coordinates Failed to Fetch')
+        })
+    })
+}
+
+
+
 searchBtn.addEventListener('click', getCityCoordinates)
+locationBtn.addEventListener('click', getUserCoordinates)
+cityInput.addEventListener('keyup', e => e.key === 'Enter' && getCityCoordinates())
+window.addEventListener('load', getUserCoordinates())
