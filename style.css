@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: #8a9a5b; */
+  background: #161623;
+  color: #fff;
+}
+.container {
+  width: 100%;
+  max-width: 620px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* border-radius: 10px; */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.date-time {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.city-name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  & i {
+    font-size: 1.3rem;
+  }
+}
+.weather-description {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  font-size: 0.9rem;
+  & #temp {
+    font-size: 2rem;
+    /* color: #fff; */
+  }
+}
+.info-details-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+.hour-forecast {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.hour-forecast-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  border-top: 1px solid #fff;
+}
+.daily-forecast {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.daily-forecast-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  border-top: 1px solid #ffff;
+}
+.info-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+.hour-forecast-box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #0072ff; */
+  padding: 20px;
+  font-size: 0.9rem;
+  & img {
+    width: 60px;
+    height: 60px;
+  }
+}
+.daily-forecast-box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #0072ff; */
+  padding: 20px;
+  font-size: 0.9rem;
+
+  & img {
+    width: 60px;
+    height: 60px;
+  }
+}
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-box .search-input input {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  text-indent: 5%;
+  /* background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  background: rgba(155, 155, 155, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(155, 155, 155, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+.search-input input::placeholder {
+  font-weight: 200;
+  text-indent: 5%;
+  color: #161623;
+  font-size: 0.9rem;
+}
+.search-input button {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  /* color: #fff; */
+  /* background-color: #24a0ed;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.search-box .logo h3 {
+  /* color: #fff; */
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 20px;
+}
+.hour-text {
+  font-size: 1rem;
+  /* color: #fff; */
+  /* text-indent: 5%; */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.search-input #current-btn {
+  /* background-color: #e32636; */
+  background: rgba(255, 0, 31, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(155, 155, 155, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  & :hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out;
+  }
+}
+.search-input #search-btn {
+  background: rgba(0, 40, 255, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(155, 155, 155, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  & :hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out;
+  }
+}
+.info-details-2 p {
+  border-right: 1px solid #fff;
+  padding: 0% 10px;
+}
+.info-details-2 p:last-child {
+  border-right: none;
+}
+.search-box .logo .logo-text {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 720px) {
+  .search-box {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .weather-info {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .daily-forecast {
+    padding: 10px;
+  }
+  .daily-forecast-box {
+    overflow-x: scroll;
+  }
+  .search-box .logo .logo-text {
+    text-indent: -5%;
+  }
+}

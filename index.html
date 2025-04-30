@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Weather App</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Icon Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <div class="logo">
+          <h3 class="logo-text">Clima</h3>
+        </div>
+
+          <div class="search-input">
+            <input
+            type="text"
+            placeholder="Enter city name...."
+            class="input"
+            id="cityInput"
+            required
+          />
+           <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+           <button id="current-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+          </div>
+      </div>
+      
+      <div class="date-time">
+        <!-- <p id="dayTime"><i class="fa-regular fa-calendar-days"></i> Friday</p>
+        <p><i class="fa-solid fa-calendar"></i> 12 May 2025</p> -->
+        <p>Now</p>
+      </div>
+
+      <div class="city-name">
+        <h4 id="cityDisplay"><i class="fa-solid fa-location-dot"></i> ___</h4>
+      </div>
+
+      <div class="weather-description">
+        <p id="description">___</p>
+      </div>
+      
+      <div class="weather-info">
+          <img src="" id="iconImg" alt="Weather icon" />
+          <h3 id="temp">_&deg;C</h3>
+          <div class="info-details">
+            <p id="realFell">
+              <i class="fa-solid fa-temperature-three-quarters"></i> Real Fell :
+              _&deg;C
+            </p>
+            <p id="humidity"><i class="fa-solid fa-droplet"></i> Humidity : _ %</p>
+            <p id="windSpeed"><i class="fa-solid fa-wind"></i> Wind : _ Km/Hr</p>
+          </div>
+      </div>
+
+      
+        <div class="info-details-2">
+            <p id="pressure"><i class="fa-solid fa-globe"></i> Pressure : _hPa</p>
+            <!-- <p id="sunSet"><i class="fa-regular fa-sun"></i> Sunset : 6:00 PM</p> -->
+            <p id="highTemp"><i class="fa-solid fa-temperature-full"></i> High : _&deg;C</p>
+            <p id="lowTemp"><i class="fa-solid fa-temperature-low"></i> Low : _&deg;C</p>
+        </div>
+
+
+        <!-- <div class="hour-text">
+          <p>Hourly Forecast</p>
+        </div>
+      <div class="hour-forecast">
+
+        <div class="hour-forecast-box">
+          <div class="hour-forecast-box-1">
+            <p>12 PM</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
+            <p>21&deg;C</p>
+          </div>
+          <div class="hour-forecast-box-1">
+            <p>1 PM</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
+            <p>22&deg;C</p>
+          </div>
+          <div class="hour-forecast-box-1">
+            <p>2 PM</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
+            <p>23&deg;C</p>
+          </div>
+          <div class="hour-forecast-box-1">
+            <p>3 PM</p>
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
+            <p>24&deg;C</p>
+          </div>
+        </div>
+      </div> -->
+      <div class="hour-text">
+        <p>Four Days Forecast</p>
+      </div>
+      <div class="daily-forecast"> 
+        <div class="daily-forecast-box">
+          <div class="daily-forecast-box-1">
+            <p>__</p>
+            <img src="" alt="Weather Icon" />
+            <p>_&deg;C</p>
+          </div>
+          <div class="daily-forecast-box-1">
+            <p>__</p>
+            <img src="" alt="Weather Icon" />
+            <p>_&deg;C</p>
+          </div>
+          <div class="daily-forecast-box-1">
+            <p>__</p>
+            <img src="" alt="Weather Icon" />
+            <p>_&deg;C</p>
+          </div>
+          <div class="daily-forecast-box-1">
+            <p>__</p>
+            <img src="" alt="Weather Icon" />
+            <p>_&deg;C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
